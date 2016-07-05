@@ -1,0 +1,16 @@
+<div>
+    <a href="#/preview" style="text-decoration: none">
+        <button>preview</button>
+    </a>
+    <br>
+    <div ng-repeat="item in items track by $index">
+        {{item}}<input type={{item}}><button ng-click="removeItem($index)">-</button>
+    </div>
+    <button ng-click="showPopup()">add</button>
+    <div ng-show="popupState">
+        <input type="radio" name="type" ng-value='"text"' ng-model="result" /> text <br>
+        <input type="radio" name="type" ng-value='"date"' ng-model="result" /> date <br>
+        <button ng-click="addItem(result)">submit</button>
+        <button ng-click="chosePopup()">chose</button>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div>
+    <a href="#/edit" style="text-decoration: none">
+        <button>edit</button>
+    </a>
+    <br>
+    <div ng-repeat="item in items track by $index">
+        {{item}}<input type={{item}}>
+    </div>
+    <button ng-click="prompt()">save</button>
+</div>
